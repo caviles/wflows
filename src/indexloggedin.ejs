@@ -1,26 +1,6 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<!--
-  **NOTE:** This is a template for index.html. It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment. htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles to this file. The generated bundles have hash-based filenames, so it's necessary to add the references dynamically.
-  For more info on ejs, see http://www.embeddedjs.com/. For examples of using it with htmlWebpackPlugin, see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
-  -->
-<head>
-  <!--
-    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
-    This is an example of how to add features to index.html for only one environment.
-    To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token in /webpack.config.prod.js on line 55.
-   -->
-  <% if (htmlWebpackPlugin.options.trackJSToken) { %>
-  <script>window._trackJs = {token: '<%= htmlWebpackPlugin.options.trackJSToken %>'};</script>
-  <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
-  <% } %>
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8"/>
-  <title>Fusion Starter</title>
-
-  <!-- framework layout files -->
+<!-- saved from url=(0068) -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,20 +26,113 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
-  <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/common.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/map.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/util.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/marker.js"></script><style type="text/css">.gm-style {
+  <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/common.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/map.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/util.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/marker.js"></script>
+  <style type="text/css">.gm-style {
       font: 400 11px Roboto, Arial, sans-serif;
       text-decoration: none;
     }
-    .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="./assets/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/controls.js"></script>
-
-  <!-- EO framework layout files -->
-</head>
+    .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="./assets/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./assets/controls.js"></script></head>
 <body data-spy="scroll" data-offset="80">
+<!--navigation -->
+<!-- Static navbar -->
 
-
-
-<div id="app"></div>
-
+<div class="navbar navbar-default navbar-fixed-top trans-before" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">wFlow <span>Simplify workflows</span></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class=""><a href="#about">About</a></li>
+        <li class=""><a href="#services">Services</a></li>
+        <li class=""><a href="#portfolio">Work</a></li>
+        <li class=""><a href="#team">Team</a></li>
+        <li class=""><a href="#price">Price</a></li>
+        <li class=""><a href="#news">News</a></li>
+        <li class=""><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div><!--.navbar-default-->
+<div class="one-page-static-wrap parallax" data-stellar-background-ratio="0.5" style="background-position: 0px 0px;">
+  <div class="container">
+    <div class="static-text">
+      <h1>We help automate Workflows.</h1>
+    </div>
+  </div>
+</div><!--static wrapper-->
+<section id="about" class="padding-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center-header">
+          <h3 class="center-heading">About Us</h3>
+          <span class="center-line"></span>
+          <p>Shortly About us</p>
+        </div>
+      </div>
+    </div><!--center heading row-->
+    <div class="row">
+      <div class="col-md-7">
+        <p class="wow animated fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        </p>
+      </div>
+      <div class="col-md-5">
+        <div class="skills-wrapper wow animated fadeInRight animated animated animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;">
+          <h3 class="heading-progress">Web Design <span class="pull-right">88%</span></h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 88%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="88" role="progressbar">
+            </div>
+          </div>
+          <h3 class="heading-progress">Web Development <span class="pull-right">78%</span></h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 78%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="78" role="progressbar">
+            </div>
+          </div>
+          <h3 class="heading-progress">Marketing <span class="pull-right">82%</span></h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 82%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="82" role="progressbar">
+            </div>
+          </div>
+        </div><!--skills-->
+      </div>
+    </div>
+  </div><!--intro and skills-->
+  <div class="divide30"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="heading">Some Facts</h3>
+      </div>
+    </div>
+    <div class="divide40"></div>
+    <div class="row">
+      <div class="col-md-3 margin20 facts-in">
+        <h3><i class="fa fa-image"></i><span class="counter">6858</span></h3>
+        <h4>Projects Complete</h4>
+      </div><!--facts in-->
+      <div class="col-md-3 margin20 facts-in">
+        <h3><i class="fa fa-users"></i><span class="counter">685</span></h3>
+        <h4>Happy Customers</h4>
+      </div><!--facts in-->
+      <div class="col-md-3 margin20 facts-in">
+        <h3><i class="fa fa-clock-o"></i><span class="counter">6000</span></h3>
+        <h4>Hours Work </h4>
+      </div><!--facts in-->
+      <div class="col-md-3 margin20 facts-in">
+        <h3><i class="fa fa-coffee"></i><span class="counter">2500</span></h3>
+        <h4>Cups of tea</h4>
+      </div><!--facts in-->
+    </div>
+  </div>
+</section>
 <section class="parallax process-rounded" data-stellar-background-ratio="0.5" style="background-position: 0% 0%;">
   <div class="container">
     <div class="row">
@@ -723,9 +796,9 @@
           <span>© Copyright 2014. Theme by Design_mylife</span>
         </div>
       </div>
-    </div>
-
-<!--footer end-->
+    </div><!--footer btm-->
+  </div>
+</footer><!--footer end-->
 <!--scripts and plugins -->
 <!--must need plugin jquery-->
 <script src="./assets/jquery.min.js"></script>
@@ -785,5 +858,7 @@
 
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-</body>
-</html>
+
+
+</body></html>
+

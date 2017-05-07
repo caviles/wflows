@@ -32,7 +32,7 @@ if (module.hot) {
       <AppContainer>
         <NewRoot store={store} history={history} />
       </AppContainer>,
-      document.getElementById('app')
+     document.getElementById('app')
     );
   });
 }

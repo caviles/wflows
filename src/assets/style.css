@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : narani
     Created on : Jul 22, 2014, 10:15:10 PM
     Author     : Design_mylife
@@ -12,10 +12,10 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800');
 
 
-body { 
+body {
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;	
+    -webkit-text-size-adjust: 100%;
     cursor:default;
     color: #333;
     font-size: 14px;
@@ -75,7 +75,7 @@ p.dropcap:first-letter{
     float: left;
     font-size: 50px;
     line-height: 51px;
-    margin: -1px 8px -2px 0; 
+    margin: -1px 8px -2px 0;
     color:#f99200;
     font-family: 'Open Sans', sans-serif;
 }
@@ -295,7 +295,7 @@ p {
         -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }  
+    }
 }
 .navbar-default.trans-before li a{
     color:#fff;
@@ -304,9 +304,7 @@ p {
     color:#fff !important;
 }
 
-.one-page-static-wrap{
-    background: url(http://bootstraplovers.com/templates/narani-v1.4/one-page/img/showcase-2.jpg);
-}
+
 .one-page-static-wrap .static-text h1{
     text-align: center;
     padding: 250px 0;
@@ -386,11 +384,11 @@ p {
 
 }
 .item-img-wrap img{
-    -webkit-transition:all 200ms linear; 
-    -moz-transition:all 200ms linear; 
-    -o-transition:all 200ms linear; 
-    -ms-transition:all 200ms linear; 
-    transition:all 200ms linear; 
+    -webkit-transition:all 200ms linear;
+    -moz-transition:all 200ms linear;
+    -o-transition:all 200ms linear;
+    -ms-transition:all 200ms linear;
+    transition:all 200ms linear;
 }
 .item-img-overlay{
     position: absolute;
@@ -417,10 +415,10 @@ p {
     opacity: 1;
 }
 .item-img-wrap:hover img{
-    -moz-transform: scale(1.1); 
-    -webkit-transform: scale(1.1); 
-    -o-transform: scale(1.1); 
-    transform: scale(1.1); 
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -543,7 +541,7 @@ input[type="color"]:focus,
     background-color: #d4d4d4;
 }
 /* mouse grab icon */
-.grabbing { 
+.grabbing {
     cursor:url(http://bootstraplovers.com/templates/narani-v1.4/one-page/img/grabbing.png) 8 8, move !important;
 }
 
@@ -598,7 +596,7 @@ input[type="color"]:focus,
     -o-transition: all 0.4s ease-in-out;
 }
 .portfolio-filters li:hover{
-    background-color: #f99200; 
+    background-color: #f99200;
     color:#fff;
 }
 .portfolio-filters li.active{
@@ -612,7 +610,7 @@ input[type="color"]:focus,
 .testimonials{
     background: url(http://bootstraplovers.com/templates/narani-v1.4/one-page/img/showcase-3.jpg);
     padding: 50px 0;
-    
+
 }
 .testimonials h4{
     color:#fff;
@@ -910,7 +908,7 @@ span.popular-tag{
     width:100%;
     height: 100%;
     top: 0;
-    left: 0; 
+    left: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
@@ -989,3 +987,20 @@ h3.heading-progress {
     box-shadow: none;
     -webkit-box-shadow: none;
 }
+
+a{
+
+  color: #000 !important;
+}
+
+ .navbar{
+
+  height: 0px !important;
+}
+
+
+.one-page-static-wrap{
+
+  height: 280px !important;
+}
+
