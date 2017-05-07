@@ -4,10 +4,10 @@ import {Link} from 'react-router';
 const HomePage = () => {
   return (
     <article>
-    <div classNameName="one-page-static-wrap parallax" data-stellar-background-ratio="0.5">
-      <div classNameName="container">
-        <div classNameName="static-text slogan">
-          <h1 classNameName="">We help automate Workflows.</h1>
+    <div className="one-page-static-wrap parallax" data-stellar-background-ratio="0.5">
+      <div className="container">
+        <div className="static-text slogan">
+          <h1 className="">We help automate Workflows.</h1>
         </div>
       </div>
     </div>
