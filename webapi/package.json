@@ -1,0 +1,21 @@
+{
+  "name": "webapi",
+  "version": "1.0.0",
+  "description": "A central API for wFlow",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Cesar",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "firebase": "^3.9.0",
+    "firebase-admin": "^4.2.1"
+  }
+}
