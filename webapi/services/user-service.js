@@ -40,9 +40,21 @@ function authenticate(email, password, callback) {
 
 }
 
+
+function logout(callback) {
+
+  firebase.auth().signOut().then(function (response) {
+    // Sign-out successful.
+    callback(null, response);
+  }).catch(function (error) {
+    // An error happened.
+    callback(error, null);
+  });
+}
+
 module.exports = {
 
   addUser : addUser,
-  authenticate : authenticate
-
+  authenticate : authenticate,
+  logout:logout
 }

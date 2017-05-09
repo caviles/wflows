@@ -4,7 +4,7 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var userService = require('./services/user-service');
-
+var dbService = require('./services/db-service');
 
 
 // configure app to use bodyParser()
@@ -65,35 +65,57 @@ router.post('/login', function(req, res){
 });
 
 
-//
-// router.post('/logout', function(req, res) {
-//
-//
-//   firebase.auth().signOut().then(function() {
-//     // Sign-out successful.
-//   }).catch(function(error) {
-//     // An error happened.
-//   });
-//
-//
-//
-// });
+router.post('/logout', function(req, res) {
+
+
+
+
+
+
+});
 
 
 router.post('/logout', function(req, res) {
 
 
-  firebase.auth().signInWithEmailAndPassword(req.body.email, req.body.password).catch(function(error) {
-    // Handle Errors here.
-    //var errorCode = error.code;
-    var errorMessage = error.message;
+  userService.logout(
 
-    res.json({ message: errorMessage });
-  });
+    function(error, authData) {
 
+      if (error) {
+        return res.status(401).send('Unauthorized');
+
+      } else {
+        return res.status(200).send(authData);
+      }
+
+    });
 
 });
 
+
+
+router.post('/postdb', function(req, res) {
+
+
+  dbService.addProjectStepsByUidAndProjectId(123, 12344, {
+    "name":"John",
+    "age":30,
+    "cars":[ "Ford", "BMW", "Fiat" ]
+  },
+
+    function(error, authData) {
+
+      if (error) {
+        return res.status(401).send('Unauthorized');
+
+      } else {
+        return res.status(200).send(authData);
+      }
+
+    });
+
+});
 
 
 
