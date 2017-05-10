@@ -1,5 +1,5 @@
 var firebase = require("firebase");
-var mongoose = require('mongoose');
+
 const projectsteps = 'projectsteps';
 
 
@@ -22,10 +22,8 @@ function addProjectStepsByUidAndProjectId(uid, pid, steps, callback) {
 }
 
 function getProjectStepsByUidAndProjectId(uid, callback) {
-  firebase.database().ref(projectsteps).orderByChild("uid").equalTo(123).on("child_added", function(data) {
+  firebase.database().ref('/projectsteps').orderByChild("uid").equalTo(123).on("child_added", function(data) {
     callback(data);
-  }, function (error) {
-    callback(error);
   });
 }
 
@@ -50,5 +48,6 @@ module.exports = {
 
   addProjectStepsByUidAndProjectId : addProjectStepsByUidAndProjectId,
   getProjectStepsByUidAndProjectId : getProjectStepsByUidAndProjectId
+
 
 }

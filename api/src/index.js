@@ -1,13 +1,11 @@
 
 // call the packages we need
-var configFile = require('./config'); //get the config file
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var userService = require('./services/user-service');
 var dbService = require('./services/db-service');
-// mongoose 4.3.x
-var mongoose = require('mongoose');
+
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -15,31 +13,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
-var port = configFile.web.port;       // set our port
+var port = process.env.PORT || 8080;        // set our port
 
 // ROUTES FOR OUR API
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
-
-/*
- * Mongoose by default sets the auto_reconnect option to true.
- * We recommend setting socket options at both the server and replica set level.
- * We recommend a 30 second connection timeout because it allows for
- * plenty of time in most operating environments.
- */
-var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
-  replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
-
-var mongodbUri = configFile.mongoConnectionString;
-
-mongoose.connect(mongodbUri, options);
-var conn = mongoose.connection;
-
-conn.on('error', console.error.bind(console, 'connection error:'));
-
-conn.once('open', function() {
-  // Wait for the database connection to establish, then start the app.
-
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
@@ -90,16 +68,6 @@ router.post('/login', function(req, res){
 router.post('/logout', function(req, res) {
 
 
-
-
-
-
-});
-
-
-router.post('/logout', function(req, res) {
-
-
   userService.logout(
 
     function(error, authData) {
@@ -121,15 +89,15 @@ router.post('/postdb', function(req, res) {
 
 
   dbService.addProjectStepsByUidAndProjectId(123, 12344, {
-    "name":"John",
-    "age":30,
-    "cars":[ "Ford", "BMW", "Fiat" ]
-  },
+      "name":"John",
+      "age":30,
+      "cars":[ "Ford", "BMW", "Fiat" ]
+    },
 
     function(error, authData) {
 
       if (error) {
-        return res.status(401).send('Unauthorized');
+        return res.status(401).send('Unauthorized ' + error );
 
       } else {
         return res.status(200).send(authData);
@@ -138,6 +106,7 @@ router.post('/postdb', function(req, res) {
     });
 
 });
+
 
 router.get('/getdb', function(req, res) {
 
@@ -158,6 +127,7 @@ router.get('/getdb', function(req, res) {
 });
 
 
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
@@ -168,5 +138,3 @@ app.use('/api', router);
 // =============================================================================
 app.listen(port);
 console.log('Magic happens on port ' + port);
-
-});
