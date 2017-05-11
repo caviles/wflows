@@ -15,8 +15,8 @@ console.log(chalkSuccess('Dependencies installed.'));
 
 prompt.start();
 
-console.log(chalkWarn("WARNING:  Preparing to delete local git repository..."));
-prompt.get([{name: 'deleteGit', description: "Delete the git repository?  [Y/n]"}], function(err, result) {
+console.log(chalkWarn("WARNING:  Preparing to delete local git services..."));
+prompt.get([{name: 'deleteGit', description: "Delete the git services?  [Y/n]"}], function(err, result) {
   var deleteGit = result.deleteGit.toUpperCase();
 
   if (err) {
@@ -99,10 +99,10 @@ prompt.get([{name: 'deleteGit', description: "Delete the git repository?  [Y/n]"
     updatePackage();
   }
   else {
-    // remove the original git repository
+    // remove the original git services
     rimraf('.git', error => {
       if (error) throw new Error(error);
-      console.log(chalkSuccess('Original Git repository removed.\n'));
+      console.log(chalkSuccess('Original Git services removed.\n'));
       updatePackage();
     });
   }

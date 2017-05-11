@@ -4,7 +4,7 @@ var configFile = require('./config'); //get the config file
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-var userService = require('./services/user-service');
+var userService = require('./services/user.service');
 var dbService = require('./services/db-service');
 // mongoose 4.3.x
 var mongoose = require('mongoose');
