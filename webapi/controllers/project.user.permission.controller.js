@@ -1,4 +1,4 @@
-var ProjectUserPermission = require('../models/project.user.permissions.model');
+let ProjectUserPermission = require('../models/project.user.permissions.model');
 
 exports.list = function(req, res) {
   var query = ProjectUserPermission.find();

@@ -1,4 +1,4 @@
-var userAuth = require('../business/auth/user.auth');
+let userAuth = require('../business/auth/user.auth');
 
 exports.create = function(req, res) {
   if (!req.body) return res.status(400).send("The body cannot be empty");

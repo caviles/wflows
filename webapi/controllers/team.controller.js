@@ -1,5 +1,5 @@
-var Team = require('../models/team.model');
-var Users = require('../models/user.model');
+let Team = require('../models/team.model');
+let Users = require('../models/user.model');
 
 exports.list = function(req, res) {
   var query = Users.find();

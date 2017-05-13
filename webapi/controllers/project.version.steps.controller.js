@@ -1,4 +1,4 @@
-var ProjectVersionSteps = require('../models/project.version.steps.model');
+let ProjectVersionSteps = require('../models/project.version.steps.model');
 
 exports.list = function(req, res) {
   var query = ProjectVersionSteps.find();

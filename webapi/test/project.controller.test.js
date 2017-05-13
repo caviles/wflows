@@ -1,11 +1,11 @@
-var expect = require('chai').expect;
-var Project = require('../controllers/project.controller');
+let expect = require('chai').expect;
+let Project = require('../controllers/project.controller');
 
-var req = {
+let req = {
   body:"123"
 };
 
-var res = {};
+let res = {};
 
 expect(Project.list(req, res)).to.be.a('string');
 expect(foo).to.equal('bar');

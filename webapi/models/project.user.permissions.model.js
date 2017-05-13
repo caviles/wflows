@@ -1,9 +1,9 @@
-var validators = require( './validators' );
-var mongoose = require( 'mongoose' );
-var Schema = mongoose.Schema;
+let validators = require( './validators' );
+let mongoose = require( 'mongoose' );
+let Schema = mongoose.Schema;
 
 
-var projectUserPermissionSchema = new Schema({
+let projectUserPermissionSchema = new Schema({
   projectId: {
     type: Schema.Types.ObjectId,
     required: true,
