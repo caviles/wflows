@@ -13,6 +13,10 @@ var projectVersionStepsSchema = new Schema({
     type: Schema.Types.ObjectId,
     required: true
   },
+  userId: {
+    type: Schema.Types.ObjectId,
+    required: true
+  },
   version: {
     type: String,
     required: true,

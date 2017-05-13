@@ -9,6 +9,10 @@ var teamSchema = new Schema({
     required: true,
     validate: validators.nameValidator
   },
+  teamId: {
+    type: Schema.Types.ObjectId, default: mongoose.Types.ObjectId(),
+    required: true
+  },
   createdOn: {
     type: Date, default: Date.now
   }

@@ -14,8 +14,7 @@ var projectSchema = new Schema({
     required: true
    },
   currentRelease: {
-    type: Schema.Types.ObjectId,
-    required: true
+    type: Schema.Types.ObjectId
   },
   url:{
     type: String,

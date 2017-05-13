@@ -3,8 +3,6 @@
  */
 var firebase = require("firebase");
 
-//var firebaseRef = new firebase('https://wflow-aab9e.firebaseio.com/');
-
 firebase.initializeApp({
   apiKey: "AIzaSyBpv7Enu-iA1t3bZCLKyH8QHTiUJtns09M",
   authDomain: "wflow-aab9e.firebaseapp.com",
@@ -15,34 +13,24 @@ firebase.initializeApp({
 });
 
 function addUser(email, password, callback) {
-
-
   firebase.auth().createUserWithEmailAndPassword(email, password).then(function(userData){
-
     callback(null, userData);
   }).catch(function(error) {
     // Handle Errors here.
     callback(error);
   });
-
 }
-
 
 function authenticate(email, password, callback) {
-
   firebase.auth().signInWithEmailAndPassword(email, password).then(function(userData){
-
     callback(null, userData);
   }).catch(function(error) {
     // Handle Errors here.
     callback(error);
   });
-
 }
 
-
 function logout(callback) {
-
   firebase.auth().signOut().then(function (response) {
     // Sign-out successful.
     callback(null, response);
@@ -53,7 +41,6 @@ function logout(callback) {
 }
 
 module.exports = {
-
   addUser : addUser,
   authenticate : authenticate,
   logout:logout
