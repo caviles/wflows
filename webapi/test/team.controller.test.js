@@ -1,17 +1,18 @@
 let assert = require("assert");
-let Team = require("../models/team.model");
-let Users = require("../models/user.model");
 let sinon = require("sinon");
+let chai = require('chai');
 let expect = require('chai').expect;
 require( 'sinon-mongoose' );
-
+let chaiHttp = require('chai-http');
+let should = chai.should();
+let Team = require("../models/team.model");
+let Users = require("../models/user.model");
+let TeamController = require("../controllers/team.controller");
+let routes = require("../routes/routes");
 
 // sinon.stub(Team, "find").yields(null, {id:1});
 sinon.stub(Users, "find").yields(null, {id:1});
-//var teamController = new TeamController();
-
-
-
+chai.use(chaiHttp);
 
 describe('Team', function() {
   beforeEach(function () {
@@ -56,6 +57,22 @@ describe('Team', function() {
       assert(res, 'SUCCESS!');
     });
 
+  });
+
+  let req = {
+    body: { idt: "123"}
+  };
+
+  it('it should get a team ', (done) => {
+    chai.request(routes)
+      .get('/team/get')
+      .send(req)
+      .end((err, res) => {
+        res.should.have.status(201);
+        res.body.should.be.a('array');
+        res.body.length.should.be.gt(0);
+        done();
+      });
   });
 });
 
